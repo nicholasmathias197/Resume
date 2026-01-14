@@ -6,12 +6,341 @@
     <title>Nicholas Mathias - Resume</title>
 
 </head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000 0%, #0a1a2e 50%, #16213e 100%);
+    color: #e0e1dd;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0, 217, 255, 0.3), 0 15px 35px rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 217, 255, 0.4);
+    position: relative;
+}
+
+.resume-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0066cc 0%, #00d9ff 50%, #0066cc 100%);
+    z-index: 10;
+}
+
+
+.header {
+    background: linear-gradient(135deg, #000000 0%, #001a33 50%, #003366 100%);
+    padding: 40px 30px;
+    text-align: center;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, #0066cc, #00d9ff) 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 153, 255, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(0, 217, 255, 0.8);
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 0 60px rgba(0, 102, 204, 0.3);
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #1b263b, #0d1b2a);
+    transition: all 0.3s ease;
+}
+
+.profile-pic-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.8), 0 0 80px rgba(0, 102, 204, 0.4);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+
+.logo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    padding: 5px;
+    border: 3px solid #00d9ff;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    z-index: 5;
+    box-shadow: 0 0 25px rgba(0, 217, 255, 0.6), 0 5px 20px rgba(0, 0, 0, 0.5);
+    margin-right: 25px;
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 217, 255, 0.8), 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(1.3) contrast(1.2);
+}
+
+.name {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #00d9ff, #0099ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 30px rgba(0, 153, 255, 0.3);
+}
+
+.title {
+    font-size: 1.4rem;
+    color: #00d9ff;
+    margin-bottom: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(0, 102, 204, 0.3);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 217, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(0, 153, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);
+}
+
+.contact-item span:first-child {
+    color: #00d9ff;
+    font-size: 1.1rem;
+}
+
+
+.section {
+    padding: 30px;
+    border-bottom: 2px solid rgba(0, 217, 255, 0.2);
+    position: relative;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #00d9ff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, #0066cc, #00d9ff) 1;
+    display: inline-block;
+    position: relative;
+    text-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background: linear-gradient(to right, #0066cc, transparent);
+}
+
+
+.entry {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 4px solid rgba(0, 217, 255, 0.6);
+    transition: all 0.3s ease;
+}
+
+.entry:hover {
+    border-left-color: #00d9ff;
+    padding-left: 20px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.entry-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #00d9ff;
+}
+
+.entry-date {
+    background: linear-gradient(135deg, #0066cc, #00a8ff);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 217, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.entry-subtitle {
+    font-size: 1.1rem;
+    color: #66ffff;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.entry-description {
+    color: #e0e1dd;
+    margin-top: 10px;
+}
+
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #0066cc, #0099ff);
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 217, 255, 0.6);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
+
+.skill-item:hover {
+    background: linear-gradient(135deg, #0099ff, #00d9ff);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 217, 255, 0.6);
+    border-color: #00d9ff;
+}
+
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+ul li::marker {
+    color: #3a86ff;
+}
+
+.entry-description li::before {
+    content: "▸";
+    color: #3a86ff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+.footer {
+    padding: 20px 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #000000 0%, #001a33 100%);
+    color: #00d9ff;
+    font-style: italic;
+    border-top: 2px solid rgba(0, 217, 255, 0.4);
+}
+
+
+
+</style>
 <body>
     <div class="resume-container">
         
         <header class="header">
-            <h1 class="name">Nicholas Mathias</h1>
-            <p class="title">Full Stack Developer</p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0px; margin-bottom: 0px;">
+                <div class="profile-pic-container">
+                    <img src="1748963612612.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+                <div>
+                    <h1 class="name">Nicholas Mathias</h1>
+                    <p class="title">Full Stack Developer</p>
+                </div>
+                  <div class="logo-container" style="margin-left: 40px;">
+                <img src="Minimilist Design 2.jpg" alt="logo-container" class="logo">
+            </div>
+            </div>
             <div class="contact-info">
                 <div class="contact-item">
                     <span>📧</span>
@@ -29,7 +358,12 @@
                     <span>🔗</span>
                     <span>www.linkedin.com/in/nicholas-mathias-hakai197</span>
                 </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <span>www.github.com/hakai197</span>
+                </div>
             </div>
+            
         </header>
         
         
@@ -56,17 +390,6 @@
                 </ul>
             </div>
             
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">Fork Lift Operator</div>
-                    <div class="entry-date">June 2024 - December 2025</div>
-                </div>
-                <div class="entry-subtitle">R&L Carriers, Wilmington, OH</div>
-                <ul class="entry-description">
-                    <li>Operated forklifts safely and efficiently in a warehouse environment, following all safety protocols and procedures.</li>
-                    <li>Maintained accurate records of inventory movements and performed routine equipment inspections to ensure operational readiness.</li>
-                </ul>
-            </div>
             
            
         </section>
