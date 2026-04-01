@@ -3,7 +3,7 @@ import PillNav from './PillNav';
 function Header() {
   return (
     <header id="top" className="header">
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0px', marginBottom: '0px' }}>
+      <div className="header-row">
         <div className="profile-pic-container">
           <a href="https://www.linkedin.com/in/nicholas-mathias-hakai197" target="_blank" rel="noopener noreferrer">
             <img src="/1748963612612.jpg" alt="Profile Picture" className="profile-pic" />
@@ -13,7 +13,7 @@ function Header() {
           <h1 className="name">Nicholas Mathias</h1>
           <p className="title">Full Stack Developer</p>
         </div>
-        <div className="logo-container" style={{ marginLeft: '40px' }}>
+        <div className="logo-container">
           <a href="https://www.github.com/hakai197" target="_blank" rel="noopener noreferrer">
             <img src="/Minimilist Design 2.jpg" alt="logo-container" className="logo" />
           </a>
