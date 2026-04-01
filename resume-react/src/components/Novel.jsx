@@ -50,8 +50,8 @@ function Novel() {
 
             <div className="novel-meta">
               <span className="meta-item">📖 Cosmic Horror / Psychological Horror</span>
-              <span className="meta-item">📄 58,000 words | 164 pages</span>
-              <span className="meta-item">⚙️ Code as incantation | 15 historical interludes</span>
+              <span className="meta-item">📄 60,000 words | 172 pages</span>
+              <span className="meta-item">⚙️ Code as incantation </span>
             </div>
 
             <div className="novel-links">
