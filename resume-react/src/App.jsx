@@ -9,6 +9,7 @@ import Novel from './components/Novel';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import Excerpt from './components/Excerpt';
+import U197Designs from './components/U197Designs';
 import Aurora from './components/Aurora';
 
 function Resume() {
@@ -42,6 +43,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Resume />} />
       <Route path="/excerpt" element={<Excerpt />} />
+      <Route path="/u197designs" element={<U197Designs />} />
     </Routes>
   );
 }

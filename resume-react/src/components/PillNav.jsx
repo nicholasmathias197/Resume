@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import './PillNav.css';
 
@@ -17,6 +18,7 @@ const PillNav = ({
   initialLoadAnimation = true
 }) => {
   const resolvedPillTextColor = pillTextColor ?? baseColor;
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
@@ -211,6 +213,12 @@ const PillNav = ({
                   aria-label={item.ariaLabel || item.label}
                   onMouseEnter={() => handleEnter(i)}
                   onMouseLeave={() => handleLeave(i)}
+                  onClick={(e) => {
+                    if (item.href && !item.href.startsWith('#')) {
+                      e.preventDefault();
+                      navigate(item.href);
+                    }
+                  }}
                 >
                   <span
                     className="hover-circle"
@@ -247,7 +255,13 @@ const PillNav = ({
               <a
                 href={item.href}
                 className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  setIsMobileMenuOpen(false);
+                  if (item.href && !item.href.startsWith('#')) {
+                    e.preventDefault();
+                    navigate(item.href);
+                  }
+                }}
               >
                 {item.label}
               </a>

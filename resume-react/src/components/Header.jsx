@@ -25,6 +25,7 @@ function Header() {
           { label: 'Skills', href: '#skills' },
           { label: 'Projects', href: '#projects' },
           { label: 'Novel', href: '#novel' },
+          { label: 'U197 Designs', href: '/u197designs' },
         ]}
         baseColor="#000000"
         pillColor="#003366"
