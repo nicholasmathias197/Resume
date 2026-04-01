@@ -1,7 +1,7 @@
 const skills = [
   'Java', 'Spring Boot', 'SQL', 'Git', 'RESTful APIs',
   'HTML/CSS/JavaScript', 'React', 'TypeScript', 'Vite',
-  'Three.js / WebGL', 'MySQL', 'Flyway', 'AWS', 'Terraform',
+  'Three.js / WebGL', 'MySQL', 'PostgreSQL', 'Flyway', 'AWS', 'Terraform',
   'CI/CD', 'Docker', 'Agile Methodologies', 'Problem Solving',
 ];
 

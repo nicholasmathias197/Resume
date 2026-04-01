@@ -14,7 +14,8 @@ function Projects() {
           significantly reducing unloading time and enhancing workflow.
           Designed an algorithm to process manifests and evaluate door assignments using real-time volume,
           proximity, and business rules.
-          Built to scale from small facilities (10 doors) to major logistics hubs (500+ doors)
+          Built to scale from small facilities (10 doors) to major logistics hubs (500+ doors){' '}
+          <a href="https://github.com/hakai197/Manifest_Processor2.0" target="_blank" rel="noopener noreferrer" style={{ color: '#00d9ff' }}>GitHub</a>
         </p>
       </div>
 
@@ -37,7 +38,8 @@ The platform then calculates year-by-year depreciation schedules using methods l
 For tax planning, AssetMind provides state-aware recommendations, helping you decide between immediate deductions or spreading expenses over time
 When purchasing complex assets like a commercial property or data center, the asset breakout feature splits the cost into components (building, roof, HVAC, etc.) with different useful lives — either manually or with AI suggestions.
 All assets are stored with full CRUD operations, pagination, and filtering. Depreciation schedules come with interactive charts showing expense trends and book value decline over time.
-Built for accountants, finance teams, and anyone managing business assets — AssetMind turns a manual, error-prone process into an intelligent, automated workflow.
+Built for accountants, finance teams, and anyone managing business assets — AssetMind turns a manual, error-prone process into an intelligent, automated workflow.{' '}
+          <a href="https://github.com/nicholasmathias197/assetmind" target="_blank" rel="noopener noreferrer" style={{ color: '#00d9ff' }}>GitHub</a>
         </p>
       </div>
 
