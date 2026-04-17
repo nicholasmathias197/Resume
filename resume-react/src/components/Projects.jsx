@@ -45,6 +45,29 @@ Built for accountants, finance teams, and anyone managing business assets — As
 
       <div className="entry">
         <div className="entry-header">
+          <div className="entry-title">BetaPages</div>
+          <div className="entry-date">2026</div>
+        </div>
+        <p className="entry-description">
+          Live at{' '}
+          <a href="https://betapageshub.com" target="_blank" rel="noopener noreferrer" style={{ color: '#00d9ff' }}>betapageshub.com</a>{' '}
+          — deployed on AWS (EC2 + S3 + CloudFront). A full-stack web application connecting aspiring
+          authors with beta readers. Authors upload story passages, control visibility (public/private),
+          and receive structured feedback including highlighted quote-level comments from trusted readers.
+          Features include passage management with category/genre tagging and NSFW flagging, a beta reader
+          approval system, personalized feeds with a follower system, advanced filtering, and a full admin
+          panel with content moderation, user management, and audit logs. All users agree to anti-plagiarism
+          terms to protect original creative work. Built with React 18 + Vite 5 frontend and Java 21 /
+          Spring Boot 3.3.5 backend, MySQL + Flyway migrations, Spring Security + JWT auth, SpringDoc
+          OpenAPI (Swagger UI), and Spring Boot Actuator monitoring. Infrastructure managed with Terraform
+          (EC2, S3, CloudFront, IAM, CloudWatch, SNS) with CI/CD via AWS CodePipeline → CodeBuild.
+          Secrets stored in AWS SSM Parameter Store. Includes 27 integration tests and a Postman collection.{' '}
+          <a href="https://github.com/nicholasmathias197/BetaPages" target="_blank" rel="noopener noreferrer" style={{ color: '#00d9ff' }}>GitHub</a>
+        </p>
+      </div>
+
+      <div className="entry">
+        <div className="entry-header">
           <div className="entry-title">The Void SSG</div>
           <div className="entry-date">2026</div>
         </div>
